@@ -43,7 +43,6 @@ exports.run = async (client, message, args) => {
       .addField('Reason', reason)
       .setFooter(`© giANTbot by ${customisation.ownername}`);
       message.channel.send({embed})
-      message.user.send({embed})
       if(user.bot) return;
       message.mentions.users.first().send({embed}).catch(e =>{
         if(e) return 
@@ -61,7 +60,6 @@ exports.run = async (client, message, args) => {
       .addField('Reason', reason)
       .setFooter(`© giANTbot by ${customisation.ownername}`);
       message.channel.send({embed})
-      message.user.send({embed})
       // let logchannel = message.guild.channels.find('name', 'logs');
       // if  (!logchannel){
       // message.channel.send({embed})
