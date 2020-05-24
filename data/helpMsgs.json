@@ -3,10 +3,10 @@
     "`settings`, `softban`, `ban`, `hackban`, `unban`, `bean`, `kick`, `mute`, `tempmute`, `warn`, `clearwarns`, `warns`, `lockdown`, `timedlockdown`, `unlockdown`, `addrole`, `removerole`, `votekick`, `rename`, `purge`"
     ],
   "helpMsg3": [
-    "`dadjoke`, `copypasta`, `roll`, `rps`, `8ball`, `cat`, `dog`, `coinflip`, `gamble`, `urban`, `advice`, `amiajoke`, `say`, `whosgay`"
+    "`dadjoke`, `copypasta`, `roll`, `rps`, `8ball`, `cat`, `dog`, `coinflip`, `urban`, `advice`, `amiajoke`, `say`, `whosgay`"
   ],
   "helpMsg4": [
-    "`about`,  `avatar`, `ping`, `serverinfo`, `uptime`, `bug`, `suggest`, `invite`, `stats`, `coins`, `pay`, `vote`, `rich`, `timer`, `colorsearch`, `duckduckgo`"
+    "`about`,  `avatar`, `ping`, `serverinfo`, `uptime`, `bug`, `suggest`, `invite`, `stats`, `vote`, `timer`, `colorsearch`, `duckduckgo`"
   ],
   "helpMsg5": [
     ""
