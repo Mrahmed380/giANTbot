@@ -46,7 +46,7 @@ exports.run = async (client, message, args) => {
     setTimeout(function(){
         message.guild.member(tomute).roles.remove(muteRole)
         message.channel.send(`<@${tomute.id}> has been unmuted`)
-    }, ms(mutetime));
+    }, ms(mutetime*1000));
 }
 
 exports.conf = {
