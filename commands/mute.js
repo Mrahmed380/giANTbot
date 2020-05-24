@@ -42,7 +42,7 @@ exports.run = async (client, message, args) => {
         .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
         .addField('Reason', reason)
         .setFooter(`© giANTbot by ${customisation.ownername}`);
-      let logchannel = message.guild.channels.find('name', 'logs');
+      let logchannel = message.guild.channel.find('name', 'logs');
       if (!logchannel) {
         message.channel.send({ embed })
       } else {
@@ -65,7 +65,7 @@ exports.run = async (client, message, args) => {
         .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
         .addField('Reason', reason)
         .setFooter(`© giANTbot by ${customisation.ownername}`);
-      let logchannel = message.guild.channels.find('name', 'logs');
+      let logchannel = message.guild.channel.find('name', 'logs');
       if (!logchannel) {
         message.channel.send({ embed })
       } else {
