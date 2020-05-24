@@ -43,8 +43,8 @@ exports.conf = {
   };
   
 exports.help = {
-    name: 'whosgay',
-    description: 'Ask the bot who is gay',
-    usage: 'whosgay'
+    name: 'clear',
+    description: 'Clear messages',
+    usage: 'clear #'
   };
   
