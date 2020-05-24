@@ -36,13 +36,7 @@ exports.run = async (client, message, args) => {
   .addField('Number of warnings:', warns[`${user.id}, ${message.guild.id}`].warns)
   .addField('Reason', reason)
   .setFooter(`© giANTbot by ${customisation.ownername}`);
-  let logchannel = message.guild.channels.find('name', 'logs');
-  if  (!logchannel){
-    message.channel.send({embed})
-  }else{
-    client.channels.get(logchannel.id).send({embed});
-    message.channel.send({embed})
-  }
+  message.channel.send({embed})
   if(user.bot) return;
   message.mentions.users.first().send({embed}).catch(e =>{
     if(e) return 
@@ -52,7 +46,7 @@ exports.run = async (client, message, args) => {
   if(warns[`${user.id}, ${message.guild.id}`].warns == 2){
     let muteRole = message.guild.roles.find('name', 'Muted')
 
-    let mutetime = "60s";
+    let mutetime = "3600s";
     message.guild.members.get(user.id).addRole(muteRole.id);
     message.reply(`${user.tag} has been temporarily muted`);
 
