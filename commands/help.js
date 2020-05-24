@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
       .setFooter(`© giANTbot by ${customisation.ownername}`);
       message.author.send({embed}).catch(e =>{
         if (e) {
-        message.channel.send(`Error. You seems to be locking your DMs so I'll send it here instead.`);
+        message.channel.send(`Error. You seem to be locking your DMs so I'll send it here instead.`);
         message.channel.send({embed});
         }
       });
@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
       .setFooter(`© giANTbot by ${customisation.ownername}`);
       message.author.send({embed}).catch(e =>{
         if (e) {
-        message.channel.send(`Error. You seems to be locking your DMs so I'll send it here instead.`);
+        message.channel.send(`Error. You seem to be locking your DMs so I'll send it here instead.`);
         message.channel.send({embed});
         }
       });
