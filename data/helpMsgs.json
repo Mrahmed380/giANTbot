@@ -1,6 +1,6 @@
 {
   "helpMsg1": [
-    "`settings`, `ban`, `hackban`, `unban`, `bean`, `kick`, `mute`, `tempmute`, `warn`, `clearwarns`, `warns`, `lockdown`, `timedlockdown`, `unlockdown`, `addrole`, `removerole`, `votekick`, `rename`, `purge`"
+    "`settings`, `ban`, `unban`, `bean`, `kick`, `mute`, `tempmute`, `warn`, `clearwarns`, `warns`, `lockdown`, `timedlockdown`, `unlockdown`, `addrole`, `removerole`, `votekick`, `rename`, `purge`"
     ],
   "helpMsg3": [
     "`dadjoke`, `copypasta`, `roll`, `rps`, `8ball`, `cat`, `dog`, `coinflip`, `urban`, `advice`, `amiajoke`, `say`, `whosgay`"
