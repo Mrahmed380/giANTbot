@@ -45,7 +45,6 @@ exports.run = async (client, message, args) => {
         if (e) return
     });
 
-    tomute.removeRoles(tomute.roles).then(console.log).catch(console.error);
     message.guild.member(tomute).roles.add(muteRole);
 
     setTimeout(function () {
