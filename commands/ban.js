@@ -16,36 +16,30 @@ exports.run = (client, message, args) => {
   if (!message.guild.member(user).bannable) {
     message.channel.send(`:redTick: I cannot ban that member. My role might not be high enough or it's an internal error.`);
     return
-  }else{
+  } else {
     const embed = new Discord.MessageEmbed()
-    .setColor(0xFF0000)
-    .setTimestamp()
-    .addField('Action:', 'Ban')
-    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Reason', reason)
-    .setFooter(`© giANTbot by ${customisation.ownername}`);
+      .setColor(0xFF0000)
+      .setTimestamp()
+      .addField('Action:', 'Ban')
+      .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
+      .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
+      .addField('Reason', reason)
+      .setFooter(`© giANTbot by ${customisation.ownername}`);
     //let obj = JSON.parse(`{"days":7, "reason": ${reason}}`)
-    if(user.bot) return;
-    message.mentions.users.first().send({embed}).catch(e =>{
-      if(e) return
+    if (user.bot) return;
+    message.mentions.users.first().send({ embed }).catch(e => {
+      if (e) return
     });
-    message.guild.members.ban(user.id, {days:7, reason: reason})
-    let logchannel = message.guild.channels.find('name', 'logs');
-    if  (!logchannel){
-    message.channel.send({embed})
-    }else{
-      client.channels.get(logchannel.id).send({embed});
-      message.channel.send({embed})
-    } 
-    if(user.bot) return;
-    message.mentions.users.first().send({embed}).catch(e =>{
-      if(e) return 
+    message.guild.members.ban(user.id, { days: 7, reason: reason })
+
+    if (user.bot) return;
+    message.mentions.users.first().send({ embed }).catch(e => {
+      if (e) return
     });
   }
 };
 
-  exports.conf = {
+exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ["bigyeet"],
