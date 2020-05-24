@@ -36,7 +36,7 @@ exports.run = async (client, message, args) => {
   .addField('Number of warnings:', warns[`${user.id}, ${message.guild.id}`].warns)
   .addField('Reason', reason)
   .setFooter(`© giANTbot by ${customisation.ownername}`);
-  message.channel.send({embed})
+  message.channel.send('@'`${user.username}${embed}`)
   if(user.bot) return;
   message.mentions.users.first().send({embed}).catch(e =>{
     if(e) return 
