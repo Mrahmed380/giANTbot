@@ -8,9 +8,9 @@ exports.run = async (client, message, args) => {
     //if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌**Error:** You have to be an Admin to use this command!");
     if(!args) return message.reply("Usage: `settings current|example|template|upload (file upload)`")
     if(args[0] === 'template'){
-        message.channel.send("Here's the settings template.", { files: ['./temp/default.json'] });
+        message.channel.send("Here's the settings template.", { files: ['./temp/thing.json'] });
     }else if(args[0] === 'example'){
-        message.channel.send("Here's the settings example.", { files: ['./temp/example.json'] });
+        message.channel.send("Here's the settings example.", { files: ['./temp/thing.json'] });
     }else if(args[0] === 'upload'){
         if(!message.attachments.first() || message.attachments.first().name.split('.').pop() !== 'json'){
             return message.reply("Please attach a proper .json file")
