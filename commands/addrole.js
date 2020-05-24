@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     member.roles.add(role).catch(e => {
         return message.channel.send(`❌**Error:**\n${e}`);
     });
-    message.channel.send(`<a:balancecheck:556017659419033653> **${message.author.username}**, I've added the **${rname}** role to **${message.mentions.users.first().username}**.`);
+    message.channel.send(` **${message.author.username}**, I've added the **${rname}** role to **${message.mentions.users.first().username}**.`);
 }
 
 exports.conf = {
