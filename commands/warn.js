@@ -8,12 +8,12 @@ const customisation = require('../customisation.json');
 exports.run = async (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let warns = JSON.parse(fs.readFileSync("../warnings.json", "utf8"));
+  let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
   //let logchannel = message.guild.channels.find('name', 'logs');
   if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("❌**Error:** You don't have the **Kick Members** permission!");
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
   if (message.mentions.users.first().id === message.author.id) return message.reply('I can\' let you do that, self-harm is bad:facepalm:');
-  if (message.mentions.users.first().id === "434434883314647063") return message.reply("You can't warn my Developer:wink:");
+  if (message.mentions.users.first().id === "242263403001937920") return message.reply("You can't warn my Developer:wink:");
   //if (!logchannel) return message.channel.send('I cannot find a logs channel');
   if (reason.length < 1) reason = 'No reason supplied.';
   
@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
 
   warns[`${user.id}, ${message.guild.id}`].warns++;
 
-  fs.writeFile("../warnings.json", JSON.stringify(warns), err => {
+  fs.writeFile("./warnings.json", JSON.stringify(warns), err => {
     if(err) throw err;
   });
 
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
   .addField('Warned by:', `${message.author.username}#${message.author.discriminator}`)
   .addField('Number of warnings:', warns[`${user.id}, ${message.guild.id}`].warns)
   .addField('Reason', reason)
-  .setFooter(`© giANTbot by ${customisation.ownername}`);
+  .setFooter(`© Cryptonix X Mod Bot by ${customisation.ownername}`);
   let logchannel = message.guild.channels.find('name', 'logs');
   if  (!logchannel){
     message.channel.send({embed})
@@ -68,7 +68,7 @@ exports.run = async (client, message, args) => {
 
   if(warns[`${user.id}, ${message.guild.id}`].warns == 5){
     message.guild.member(user).ban(reason);
-    message.reply('You won\' have to worry about that shit-head any longer, I have Banned him!');
+    message.reply('You won\' have to worry about that shit-head any longer, I have Banned them!');
   }
 
 };
@@ -77,7 +77,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ["smolyeet"],
-  permLevel: 2
+  permLevel: 0
 };
 
 exports.help = {
