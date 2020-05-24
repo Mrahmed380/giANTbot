@@ -4,15 +4,13 @@ const customisation = require('../customisation.json');
 
 exports.run = async (client, message, args, tools) => {
     if(!message.channel.nsfw) return message.reply("NSFW is not enabled in this channel");
-
-    message.channel.send(`${boobs[Math.floor(Math.random() * boobs.length)]}`);
     
-    // const embed = new Discord.MessageEmbed()
-    // .setColor("#ff9900")
-    // .setTitle(`take some boobies`)
-    // .setImage(`${boobs[Math.floor(Math.random() * boobs.length)]}`) 
-    // .setFooter(`© giANTbot by ${customisation.ownername}`);
-    // message.channel.send({embed})
+     const embed = new Discord.MessageEmbed()
+     .setColor("#ff9900")
+     .setTitle(`take some boobies`)
+     .setImage(`${boobs[Math.floor(Math.random() * boobs.length)]}`) 
+     .setFooter(`© giANTbot by ${customisation.ownername}`);
+     message.channel.send({embed})
 };
 
 exports.conf = {
