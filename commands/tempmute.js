@@ -39,11 +39,11 @@ exports.run = async (client, message, args) => {
         .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
         .addField('Length', ms(ms(mutetime)))
         .setFooter(`© giANTbot by ${customisation.ownername}`);
-        message.channel.send({embed})
-        if(tomute.bot) return;
-        message.mentions.users.first().send({embed}).catch(e =>{
-          if(e) return 
-        });
+    message.channel.send({ embed })
+    if (tomute.bot) return;
+    message.mentions.users.first().send({ embed }).catch(e => {
+        if (e) return
+    });
 
     message.guild.member(tomute).roles.add(muteRole);
 
