@@ -27,13 +27,6 @@ exports.run = (client, message, args) => {
   });
   message.guild.member(user).kick();
 
-  let logchannel = message.guild.channels.find('name', 'logs');
-  if (!logchannel) {
-    message.channel.send({ embed })
-  } else {
-    client.channels.get(logchannel.id).send({ embed });
-    message.channel.send({ embed })
-  }
   if (user.bot) return;
   message.mentions.users.first().send({ embed }).catch(e => {
     if (e) return
