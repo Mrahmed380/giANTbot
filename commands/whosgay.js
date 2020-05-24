@@ -14,11 +14,6 @@ exports.run = async (bot, message, args) => {
         'Robin',
         'Robin',
         'Robin',
-        'Robin',
-        'Robin',
-        'Robin',
-        'Robin',
-        'Robin',
         'Robin'
     ];
 
