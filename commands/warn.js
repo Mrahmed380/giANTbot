@@ -8,7 +8,7 @@ const customisation = require('../customisation.json');
 exports.run = async (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
+  let warns = JSON.parse(fs.readFileSync("../warnings.json", "utf8"));
   //let logchannel = message.guild.channels.find('name', 'logs');
   if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("❌**Error:** You don't have the **Kick Members** permission!");
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
 
   warns[`${user.id}, ${message.guild.id}`].warns++;
 
-  fs.writeFile("./warnings.json", JSON.stringify(warns), err => {
+  fs.writeFile("../warnings.json", JSON.stringify(warns), err => {
     if(err) throw err;
   });
 
