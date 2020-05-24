@@ -1,13 +1,12 @@
 {
   "infoMsg1": [
-    "Hey there! If you're seeing this, it means you want to add the bot to your server. Before we do that, there are a couple things you need to know about the bot. If you do not follow these steps, the bot won't work for you, and will error for me! We don't want that, do we?"
+    "Hey there! If you're seeing this, it means you want to add the bot to your server. Here is the invite link!"
   ],
   "infoMsg2": [
     "Then, you need to invite the bot! Here's an invite link. https://discord.com/",
-    "Once you've done that, do `/settings` to set up the bot. After all that, use `/help` to see all the commands that the bot has for you."
+    "Once you've done that, do `/settings` to set up the bot. Download the template and adjust the thing.json file to your wishes, then you can upload it. After all that, use `/help` to see all the commands that the bot has for you."
   ],
   "infoMsg3": [
-    "To-Do List: Listening to Suggestions and fixing reported bugs! Do /suggest <suggestion> if you have any suggestions or /bug <bug> if you found any bugs. Thanks.",
-    "Support Server: https://discord.gg/"
+    "To-Do List: Listening to Suggestions and fixing reported bugs! Do /suggest <suggestion> if you have any suggestions or /bug <bug> if you found any bugs. Thanks."
   ]
 }
