@@ -26,12 +26,22 @@ exports.run = (client, message, args) => {
       .addField('Reason', reason)
       .setFooter(`© giANTbot by ${customisation.ownername}`);
     //let obj = JSON.parse(`{"days":7, "reason": ${reason}}`)
+    if (user.bot) return;
     message.mentions.users.first().send({ embed }).catch(e => {
       if (e) return
     });
-
     message.guild.members.ban(user.id, { days: 7, reason: reason })
-
+    let logchannel = message.guild.channels.find('name', 'logs');
+    if (!logchannel) {
+      message.channel.send({ embed })
+    } else {
+      client.channels.get(logchannel.id).send({ embed });
+      message.channel.send({ embed })
+    }
+    if (user.bot) return;
+    message.mentions.users.first().send({ embed }).catch(e => {
+      if (e) return
+    });
   }
 };
 
