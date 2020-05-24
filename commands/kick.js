@@ -20,8 +20,6 @@ exports.run = (client, message, args) => {
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason)
     .setFooter(`© giANTbot by ${customisation.ownername}`);
-  message.channel.send({ embed })
-  if (user.bot) return;
   message.mentions.users.first().send({ embed }).catch(e => {
     if (e) return
   });
