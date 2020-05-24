@@ -4,7 +4,7 @@ const ms = require("ms");
 //const mysql = require('mysql');
 //const file = require('../mysql.json');
 const customisation = require('../customisation.json');
-const warns = JSON.parse(fs.readFileSync("./warning.json", "utf8"));
+const warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 exports.run = async (client, message, args) => {
 
