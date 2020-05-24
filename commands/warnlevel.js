@@ -4,7 +4,7 @@ const ms = require("ms");
 const customisation = require('../customisation.json');
 
 exports.run = (client, message, args) => {
-    let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
+    let warns = JSON.parse(fs.readFileSync("../warnings.json", "utf8"));
     let user = message.mentions.users.first();
     if(message.mentions.users.size < 1) return message.reply('You must mention someone to check their warns.').catch(console.error);
     if(!user) return message.reply("Couldn't find that user...");
