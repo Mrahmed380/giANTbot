@@ -3,7 +3,7 @@
     "Hey there! If you're seeing this, it means you want to add the bot to your server. Here is the invite link!"
   ],
   "infoMsg2": [
-    "Then, you need to invite the bot! Here's an invite link. https://discord.com/",
+    "Then, you need to invite the bot! Here's an invite link. https://discord.com/api/oauth2/authorize?client_id=713764412472819712&permissions=8&scope=bot",
     "Once you've done that, do `/settings` to set up the bot. Download the template and adjust the thing.json file to your wishes, then you can upload it. After all that, use `/help` to see all the commands that the bot has for you."
   ],
   "infoMsg3": [
