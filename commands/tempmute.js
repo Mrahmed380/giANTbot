@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
     .addField('Action:', 'Temp Mute')
     .addField('User:', `${tomute.username}#${tomute.discriminator} (${tomute.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Length', ms(ms(mutetime)))
+    .addField('Length', ms(ms(mutetime * 1000)))
     .setFooter(`© giANTbot by ${customisation.ownername}`);
     message.channel.send({embed});
 
