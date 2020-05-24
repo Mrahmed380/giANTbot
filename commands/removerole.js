@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     member.roles.remove(role).catch(e => {
         return message.channel.send(":no_entry_sign: There was an error! It most likely is that the role you are trying to remove is higher than the the role I have!");
     });
-    message.channel.send(`<a:balancecheck:556017659419033653> **${message.author.username}**, I've removed the **${role.name}** role from **${message.mentions.users.first().username}**.`);
+    message.channel.send(` **${message.author.username}**, I've removed the **${role.name}** role from **${message.mentions.users.first().username}**.`);
 }
 
 exports.conf = {
