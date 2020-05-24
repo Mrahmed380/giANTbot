@@ -24,7 +24,6 @@ exports.run = (client, message, args) => {
       const embed = new Discord.MessageEmbed()
       .setColor(Math.floor(Math.random()*16777215))
       .setTitle("Command list for giANTbot:")
-      .addField("All commands have been migrated to here:", "https://is-really.fun/giANTbot/commands")
       .addField("For more info about a specific Command:", "Use [prefix]help command_name")
       .addField("Moderation:", help.helpMsg1)
       .addField("Fun:", help.helpMsg3)
