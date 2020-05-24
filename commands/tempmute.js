@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
     .addField('Action:', 'Temp Mute')
     .addField('User:', `${tomute.username}#${tomute.discriminator} (${tomute.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Length', ms(ms(mutetime*1000)))
+    .addField('Length', ms(ms(mutetime)))
     .setFooter(`© giANTbot by ${customisation.ownername}`);
     message.channel.send({embed});
 
@@ -46,7 +46,7 @@ exports.run = async (client, message, args) => {
     setTimeout(function(){
         message.guild.member(tomute).roles.remove(muteRole)
         message.channel.send(`<@${tomute.id}> has been unmuted`)
-    }, ms(mutetime*1000));
+    }, ms(mutetime));
 }
 
 exports.conf = {
