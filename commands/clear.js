@@ -8,7 +8,9 @@ exports.run = async (bot, message, args) => {
 
     if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I dont have the permissions to do this");
 
-    if (!args[0]) return message.reply("Specify the number of messages");
+    if (message.author.id == '434434883314647063' || message.member.hasPermission("MANAGE_MESSAGES"));
+
+    if (!args[0]) return message.reply("Specify the number of messages") {
 
     if (Number.isInteger(parseInt(args[0]))) {
 
@@ -35,6 +37,8 @@ exports.run = async (bot, message, args) => {
     } else {
         return message.reply("Specify a number!");
     }
+
+};
 
 }
 exports.conf = {
