@@ -149,7 +149,7 @@ exports.run = async (client, message, args) => {
     }else{
         return message.reply("Usage: `settings template|upload|current (file upload)`")
     }
-};  
+};
 
 exports.conf = {
     enabled: true,
