@@ -8,7 +8,7 @@ module.exports = client => {
         "Online and ready to serve",
         "/help",
         "discord.gg/SJthYce",
-        "Online and ready"
+        "/invite"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
