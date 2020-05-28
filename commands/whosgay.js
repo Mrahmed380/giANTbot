@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const customisation = require('../customisation.json');
 
 exports.run = async (bot, message, args) => {
+
+  var user = message.guild.members.random();
+  console.log(`${user.user}`);
+
     let replies = [
         'Robin',
         'Jorn',
@@ -24,7 +28,7 @@ exports.run = async (bot, message, args) => {
     .setTitle("Who is gay?")
     .setColor("#AA9900")
     .addField("Q:", question)
-    .addField("A:", replies[result])
+    .addField("A:", replies[user.user])
     .setFooter(`© giANTbot by ${customisation.ownername}`);
 
     message.channel.send({embed});
