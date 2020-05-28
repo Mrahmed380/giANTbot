@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 
 exports.run = async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR") && message.author.id !== '434434883314647063') return message.reply("❌**Error:** You have to be an Admin to use this command!");
+    if (message.author.id == '434434883314647063' || message.member.hasPermission("ADMINISTRATOR"))
     if(!args) return message.reply("Usage: `settings current|example|template|upload (file upload)`")
     if(args[0] === 'template'){
         message.channel.send("Here's the settings template.", { files: ['./temp/thing.json'] });
