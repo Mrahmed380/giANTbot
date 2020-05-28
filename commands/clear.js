@@ -6,6 +6,8 @@ exports.run = async (bot, message, args) => {
     // !clear aantal
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You dont have permission for this command!");
 
+    if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I dont have the permissions to do this");
+
     if (!args[0]) return message.reply("Specify the number of messages");
 
     if (Number.isInteger(parseInt(args[0]))) {
