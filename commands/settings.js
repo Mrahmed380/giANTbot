@@ -5,7 +5,7 @@ const fs = require('fs')
 const mongoose = require('mongoose')
 
 exports.run = async (client, message, args) => {
-    //if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌**Error:** You have to be an Admin to use this command!");
+    if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("❌**Error:** You have to be an Admin to use this command!");
     if(!args) return message.reply("Usage: `settings current|example|template|upload (file upload)`")
     if(args[0] === 'template'){
         message.channel.send("Here's the settings template.", { files: ['./temp/thing.json'] });
