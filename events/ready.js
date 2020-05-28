@@ -7,8 +7,8 @@ module.exports = client => {
     const activities_list = [
         "Online and ready to serve",
         "/help",
-        "https://discord.gg/SJthYce",
-        "Online and ready to serve"
+        "discord.gg/SJthYce",
+        "Online and ready"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
