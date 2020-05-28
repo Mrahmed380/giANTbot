@@ -1,12 +1,13 @@
 {
   "infoMsg1": [
-    "Hey there! If you're seeing this, it means you want to add the bot to your server. Here is the invite link!"
+    "Hey there! If you're seeing this, it means you want to add the bot to your server."
   ],
   "infoMsg2": [
     "Then, you need to invite the bot! Here's an invite link. https://discord.com/api/oauth2/authorize?client_id=713764412472819712&permissions=8&scope=bot",
     "Once you've done that, do `/settings` to set up the bot. Download the template and adjust the thing.json file to your wishes, then you can upload it. After all that, use `/help` to see all the commands that the bot has for you."
   ],
   "infoMsg3": [
-    "To-Do List: Listening to Suggestions and fixing reported bugs! Do /suggest <suggestion> if you have any suggestions or /bug <bug> if you found any bugs. Thanks."
+    "To-Do List: Listening to Suggestions and fixing reported bugs! Do /suggest <suggestion> if you have any suggestions or /bug <bug> if you found any bugs. Thanks.",
+    "Bot-Support Server: https://discord.gg/SJthYce"
   ]
 }
