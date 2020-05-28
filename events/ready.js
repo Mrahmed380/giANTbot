@@ -8,12 +8,12 @@ module.exports = client => {
         "Online and ready to serve",
         "/help",
         "https://discord.gg/SJthYce",
-        "Online and ready to server"
+        "Online and ready to serve"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-        client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
+        client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
     }, 10000); // Runs this every 10 seconds.
 
     console.log(chalk.bgGreen.black(`Online and ready to serve.`));
