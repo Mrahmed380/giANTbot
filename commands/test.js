@@ -3,7 +3,7 @@ const customisation = require('../customisation.json');
 
 exports.run = async (bot, message, args) => {
 
-    var user = message.guild.members.random();
+    var user = guild.members.random();
     console.log(`${user.user}`);
 
 }
