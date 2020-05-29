@@ -4,7 +4,17 @@ const customisation = require('../customisation.json');
 exports.run = async (bot, message, args) => {
 
   let user = message.guild.members.cache.random();
-  console.log(user.user);
+
+  let question = "Who is gay?";
+
+  let embed = new Discord.MessageEmbed()
+  .setTitle("Who is gay?")
+  .setColor("#AA9900")
+  .addField("Q:", question)
+  .addField("A:", user.user)
+  .setFooter(`© giANTbot by ${customisation.ownername}`);
+
+  message.channel.send({embed});
 
 }
 exports.conf = {
