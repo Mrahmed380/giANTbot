@@ -22,7 +22,6 @@ exports.run = async (bot, message, args) => {
     let question = "Who is gay?";
 
     let embed = new Discord.MessageEmbed()
-    .setTitle("Who is gay?")
     .setColor("#AA9900")
     .addField("Q:", question)
     .addField("A:", replies[result])
@@ -38,8 +37,8 @@ exports.conf = {
   };
   
 exports.help = {
-    name: 'whosgay',
+    name: 'nawgay',
     description: 'Ask the bot who is gay',
-    usage: 'whosgay'
+    usage: 'nawgay'
   };
   
