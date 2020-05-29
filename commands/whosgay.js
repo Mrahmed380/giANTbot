@@ -25,7 +25,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'test',
+  name: 'whosgay',
   description: 'Ask the bot who is gay',
-  usage: 'test'
+  usage: 'whosgay'
 };
