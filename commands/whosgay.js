@@ -8,7 +8,6 @@ exports.run = async (bot, message, args) => {
   let question = "Who is gay?";
 
   let embed = new Discord.MessageEmbed()
-  .setTitle("Who is gay?")
   .setColor("#AA9900")
   .addField("Q:", question)
   .addField("A:", user.user)
