@@ -10,7 +10,7 @@ exports.run = async (bot, message, args) => {
   let embed = new Discord.MessageEmbed()
   .setColor("#AA9900")
   .addField("Q:", question)
-  .addField("A:", user.displayname)
+  .addField("A:", user.displayName)
   .setFooter(`© giANTbot by ${customisation.ownername}`);
 
   message.channel.send({embed});
